@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="row">
+    <div class='navbar-collapse collapse' [ngClass]='{ "in": isExpanded }'>
+      <ul class='nav navbar-nav'>
+        <li [routerLinkActive]='["link-active"]'>
+          <a [routerLink]='["/"]'>
+            <span class='glyphicon glyphicon-home'></span> Home
+          </a>
+        </li>
+        <li [routerLinkActive]='["link-active"]'>
+          <a [routerLink]='["/cadastro"]'>
+            <span class='glyphicon glyphicon-record'></span> Cadastro
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="well">
+  <form role="form">
+    <div class="row">
+      <div class='col-sm-5 body-content'>
+        <input type="text" class="form-control" placeholder="Nome" [(ngModel)]="nameRegister" name="nameRegister" />
+      </div>
+      <div class='col-sm-2 body-content'></div>
+      <div class='col-sm-5 body-content'>
+        <input type="date" class="form-control" placeholder="Data Nascimento" [(ngModel)]="dateBirthRegister" name="dateBirthRegister" />
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class='col-sm-5 body-content'>
+        <input type="email" class="form-control" placeholder="E-mail" [(ngModel)]="emailRegister" name="emailRegister" />
+      </div>
+      <div class='col-sm-2 body-content'></div>
+      <div class='col-sm-5 body-content'>
+        <select class="form-control" [(ngModel)]="professionIdRegister" name="listProfission" id="listProfission">
+          <option *ngFor="let prof of listProfission" [value]="prof.professionId">{{prof.description}}</option>
+        </select>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class='col-sm-5'>
+        <input type="checkbox" style="width:15px;height:15px;" [(ngModel)]="unemployedRegister" name="unemployedRegister" id="unemployedRegister"> Desempregado
+      </div>
+      <div class='col-sm-2 body-content'></div>
+      <div class='col-sm-5 body-content'>
+        <button class="btn btn-success" (click)="save()">Cadastrar</button>
+      </div>
+    </div>
+  </form>
+</div>

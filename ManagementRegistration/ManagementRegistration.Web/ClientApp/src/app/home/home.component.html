@@ -1,0 +1,31 @@
+<div class="row">
+ <div class="row">
+    <div class='navbar-collapse collapse' [ngClass]='{ "in": isExpanded }'>
+      <ul class='nav navbar-nav'>
+        <li [routerLinkActive]='["link-active"]'>
+          <a [routerLink]='["/"]'>
+            <span class='glyphicon glyphicon-home'></span> Home
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row" style="align-content:center">
+  <div class='col-sm-4 body-content'></div>
+  <div class='col-sm-4 body-content'>
+    <p style="text-align:center">TOTAL CADASTRADOS: {{countRegisters}}</p>
+  </div>
+  <div class='col-sm-4 body-content'></div>
+</div>
+<div class="row">
+  <div class='col-sm-4 body-content'></div>
+  <div class='col-sm-2 body-content'>
+    <button style="align-content:flex-start;width:100px;" (click)="register()">Cadastrar</button>
+  </div>
+  <div class='col-sm-2 body-content'>
+    <button style="align-content:flex-end;width:100px;" (click)="listRegisters()">Listar</button>
+    
+  </div>
+  <div class='col-sm-4 body-content'></div>
+</div>

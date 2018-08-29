@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="row">
+    <div class='navbar-collapse collapse' [ngClass]='{ "in": isExpanded }'>
+      <ul class='nav navbar-nav'>
+        <li [routerLinkActive]='["link-active"]'>
+          <a [routerLink]='["/"]'>
+            <span class='glyphicon glyphicon-home'></span> Home
+          </a>
+        </li>
+        <li [routerLinkActive]='["link-active"]'>
+          <a [routerLink]='["/listar"]'>
+            <span class='glyphicon glyphicon-th-list'></span> Listar
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<p *ngIf="!listRegister"><em>Loading...</em></p>
+
+<table class='table' *ngIf="listRegister">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>E-mail</th>
+      <th>Idade</th>
+      <th>Profissão</th>
+      <th>Desempregado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let register of listRegister">
+      <td>{{ register.name }}</td>
+      <td>{{ register.email }}</td>
+      <td>{{ register.age }}</td>
+      <td>{{ register.professionDescription }}</td>
+      <td>{{ register.unemployed==true?'Sim':'Não' }}</td>
+    </tr>
+  </tbody>
+</table>

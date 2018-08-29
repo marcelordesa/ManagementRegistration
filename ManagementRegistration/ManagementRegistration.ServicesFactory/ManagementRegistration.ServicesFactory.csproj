@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ManagementRegistratio.Infrastructure\ManagementRegistration.Infrastructure.csproj" />
+    <ProjectReference Include="..\ManagementRegistration.Domain\ManagementRegistration.Domain.csproj" />
+    <ProjectReference Include="..\ManagementRegistration.RepositoriesFactory\ManagementRegistration.RepositoriesFactory.csproj" />
+    <ProjectReference Include="..\ManagementRegistration.Services\ManagementRegistration.Services.csproj" />
+  </ItemGroup>
+
+</Project>

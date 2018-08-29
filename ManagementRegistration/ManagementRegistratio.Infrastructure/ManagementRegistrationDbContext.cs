@@ -1,5 +1,4 @@
 ﻿using ManagementRegistration.Domain.Entities;
-using Microsoft.Extensions.Configuration;
 using MongoDB.Driver;
 using System;
 using System.Linq;
